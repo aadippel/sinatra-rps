@@ -17,7 +17,7 @@ get("/rock") do
     @outcome = "won"
   end
   
-  erb (:zebra)
+  erb (:rock)
 end
 
 get("/paper") do
@@ -31,6 +31,21 @@ get("/paper") do
   else 
     @outcome = "won"
   end
+
+  erb (:paper)
+end
+
+get("/scissors") do
+  moves = ["rock", "paper", "scissors"]
+  @comp_move = moves.sample
   
-  erb (:giraffe)
+  if @comp_move == "scissors"
+    @outcome = "tied"
+  elsif @comp_move == "rock"
+    @outcome = "lost"
+  else 
+    @outcome = "won"
+  end
+  
+  erb (:scissors)
 end
