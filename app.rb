@@ -17,9 +17,9 @@ moves = ["rock", "paper", "scissors"]
 if @comp_move == "rock"
   @outcome = "tied"
 elsif @comp_move == "paper"
-  @outcome == "lost"
+  @outcome = "lost"
 else 
-  @outcome == "won"
+  @outcome = "won"
 end
 
 erb (:zebra)
